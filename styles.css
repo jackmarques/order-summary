@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Blue-100: hsl(225, 100%, 94%);
+    --Blue-700: hsl(245, 75%, 52%);
+    --Blue-50: hsl(225, 100%, 98%);
+    --Gray-600: hsl(224, 23%, 55%);
+    --Blue-950: hsl(223, 47%, 23%);
+    --fonte-principal: "Red Hat Display", sans-serif;
+}
+
+body{
+    background-image: url('images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--Blue-100);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fonte-principal);
+}
+
+.container{
+    max-width: 100%;
+    width: 440px;
+    height: 630px;
+    background-color: var(--Blue-50);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.image{
+    width: 100%;
+}
+
+.image img{
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.info{
+    height: 100%;
+    text-align: center;
+    padding: 30px 0 30px 0;
+}
+
+.info h1{
+    font-weight: 900;
+    font-size: 28px;
+    color: var(--Blue-950);
+    margin-bottom: 16px;
+}
+
+.info p.principal{
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--Gray-600);
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 20px;
+}
+
+.valor{
+    display: flex;
+    background-color:  hsla(225, 100%, 94%, 0.438);
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+    margin: 0 45px 20px;
+    gap: 20px;
+}
+
+.valor .preco{
+    font-size: 14px;
+    text-align: left;
+    color: var(--Gray-600);
+}
+
+.change{
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    color: rgba(49, 49, 255, 0.61);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.change:hover{
+    color: var(--Blue-700);
+}
+
+.pagamento{
+    display: flex;
+    flex-direction: column;
+    margin: 0 45px 20px;
+    border-radius: 10px;
+}
+
+.pagamento button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 10px;
+    box-shadow: solid 10px 15px;
+}
+
+.pagamento button.pay{
+    background-color: rgba(49, 49, 255, 0.61);
+    padding: 15px;
+    color: var(--Blue-50);
+    box-shadow: 0px 15px 15px hsla(224, 62%, 74%, 0.596);
+    margin-bottom: 20px;
+}
+
+.pagamento button.pay.active{
+    background-color: var(--Blue-700);
+}
+.pagamento button.cancel{
+    color: var(--Gray-600);
+    font-weight: 900;
+}
+
+@media (max-width: 380px){
+    body{
+        background-image: url('images/pattern-background-mobile.svg');
+    }
+    .info{
+    height: 100%;
+    text-align: center;
+    padding: 20px 0px;
+    }
+    .container{
+        width: 265px;
+        height: auto;
+    }
+    .info h1{
+        font-weight: 900;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .info p.principal{
+        font-size: 12px;
+        line-height: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .anual h4{
+        font-size: 12px;
+    }
+    .valor{
+        padding: 10px;
+        margin: 0 20px 20px;
+        gap: 10px;
+    }
+    .valor .preco{
+        font-size: 11px;
+    }
+    .change{
+        font-size: 11px;
+    }
+    .pagamento{
+        margin: 0 20px 20px;
+    }
+    .pagamento button{
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 381px) and (max-width: 1440px){
+    .container{
+        width: 350px;
+        height: auto;
+    }
+    .info h1{
+        font-weight: 900;
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+    .info p.principal{
+        font-size: 13px;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    .anual h4{
+        font-size: 15px;
+    }
+    .valor{
+        padding: 15px;
+        margin: 0 35px 20px;
+        gap: 15px;
+    }
+    .valor .preco{
+        font-size: 13px;
+    }
+    .change{
+        font-size: 13px;
+    }
+    .pagamento{
+        margin: 0 35px 20px;
+    }
+    .pagamento button{
+        font-size: 12px;
+    }
+}
