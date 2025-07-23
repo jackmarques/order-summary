@@ -31,7 +31,7 @@ body{
     max-width: 100%;
     width: 440px;
     height: 630px;
-    background-color: var(--Blue-50);
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
