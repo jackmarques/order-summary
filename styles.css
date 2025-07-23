@@ -137,11 +137,14 @@ body{
 @media (max-width: 380px){
     body{
         background-image: url('images/pattern-background-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: cover; /* Troque 'contain' por 'cover' para evitar espaços vazios ou estourar */
+        min-height: 100vh;
+        overflow-x: hidden; /* Garante que não tem scroll lateral */
     }
     .info{
-    height: 100%;
-    text-align: center;
-    padding: 20px 0px;
+        text-align: center;
+        padding: 20px 0px;
     }
     .container{
         width: 265px;
